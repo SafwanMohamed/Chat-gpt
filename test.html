@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Awesome Icon Change on Typing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Container for input and icon */
+    .input-container {
+      position: relative;
+      width: 250px;
+    }
+
+    /* Base input styles */
+    .input-container input {
+      width: 100%;
+      padding: 10px 40px; /* Space for the icon */
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Icon default style */
+    .input-container .fa {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    /* Focus state of the input */
+    .input-container input:focus {
+      border-color: #4CAF50; /* Change border color when typing */
+      outline: none;
+    }
+
+    /* Change icon color when input is focused */
+    .input-container input:focus + .fa {
+      color: #4CAF50; /* Change icon color */
+    }
+    .triangle {
+      margin-top: 50px;
+      margin-left: 50px;
+      width: 0;
+      height: 0;
+      border: 10px solid green;
+      border-color: transparent transparent yellow transparent;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <input type="text" placeholder="Type something...">
+  <i class="fa fa-search"></i> <!-- Font Awesome icon -->
+</div>
+
+<div class="triangle"></div>
+
+</body>
+</html>
